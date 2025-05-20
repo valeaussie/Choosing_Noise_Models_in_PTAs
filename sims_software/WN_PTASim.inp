@@ -1,0 +1,145 @@
+<define>
+name: WN_PTASim
+nproc: 1
+nreal: 1
+</define>
+
+<pulsars>
+psr: name=J0030+0451
+psr: name=J0613-0200
+psr: name=J0900-3144
+psr: name=J1024-0719
+psr: name=J1446-4701
+psr: name=J1603-7202
+psr: name=J1730-2304
+psr: name=J1902-5105
+psr: name=J1939+2134
+psr: name=J2145-0750
+psr: name=J0125-2327
+psr: name=J0614-3329
+psr: name=J1017-7156
+psr: name=J1045-4509
+psr: name=J1545-4550
+psr: name=J1643-1224
+psr: name=J1832-0836
+psr: name=J1909-3744
+psr: name=J2124-3358
+psr: name=J2241-5236
+psr: name=J0437-4715
+psr: name=J0711-6830
+psr: name=J1022+1001
+psr: name=J1125-6014
+psr: name=J1600-3053
+psr: name=J1713+0747
+psr: name=J1744-1134
+psr: name=J1857+0943
+psr: name=J1933-6211
+psr: name=J2129-5721
+</pulsars>
+
+<add>
+gwb: amp=2.0e-15
+</add>
+
+<obsRun>
+name: pks
+tel: pks
+start: 50000
+finish: 58000
+sampling: cadence=25
+sched: sched_similar_regsamp
+</obsRun>
+
+<schedule>
+name: sched_similar_regsamp
+observe: psr=J0030+0451,toaerr=2.67e-07,freq=3100
+observe: psr=J0030+0451,toaerr=7.11e-07,freq=1400
+observe: psr=J0030+0451,toaerr=1.15e-07,freq=600
+observe: psr=J0125-2327,toaerr=2.71e-07,freq=3100
+observe: psr=J0125-2327,toaerr=2.2e-07,freq=1400
+observe: psr=J0125-2327,toaerr=6.57e-07,freq=600
+observe: psr=J0437-4715,toaerr=4.22e-08,freq=3100
+observe: psr=J0437-4715,toaerr=5.52e-08,freq=1400
+observe: psr=J0437-4715,toaerr=1.41e-07,freq=600
+observe: psr=J0613-0200,toaerr=2.07e-07,freq=3100
+observe: psr=J0613-0200,toaerr=6.04e-07,freq=1400
+observe: psr=J0613-0200,toaerr=5.63e-07,freq=600
+observe: psr=J0614-3329,toaerr=9.31e-07,freq=3100
+observe: psr=J0614-3329,toaerr=8.03e-07,freq=1400
+observe: psr=J0614-3329,toaerr=1.62e-07,freq=600
+observe: psr=J0711-6830,toaerr=1.89e-07,freq=3100
+observe: psr=J0711-6830,toaerr=5.53e-07,freq=1400
+observe: psr=J0711-6830,toaerr=1.56e-07,freq=600
+observe: psr=J0900-3144,toaerr=2.77e-07,freq=3100
+observe: psr=J0900-3144,toaerr=1.28e-07,freq=1400
+observe: psr=J0900-3144,toaerr=2.6e-07,freq=600
+observe: psr=J1017-7156,toaerr=6.72e-07,freq=3100
+observe: psr=J1017-7156,toaerr=2.47e-07,freq=1400
+observe: psr=J1017-7156,toaerr=6.41e-07,freq=600
+observe: psr=J1022+1001,toaerr=2.18e-07,freq=3100
+observe: psr=J1022+1001,toaerr=1.62e-07,freq=1400
+observe: psr=J1022+1001,toaerr=1.48e-07,freq=600
+observe: psr=J1024-0719,toaerr=2.48e-07,freq=3100
+observe: psr=J1024-0719,toaerr=6.61e-07,freq=1400
+observe: psr=J1024-0719,toaerr=1.33e-07,freq=600
+observe: psr=J1045-4509,toaerr=6.16e-07,freq=3100
+observe: psr=J1045-4509,toaerr=1.85e-07,freq=1400
+observe: psr=J1045-4509,toaerr=2.73e-07,freq=600
+observe: psr=J1125-6014,toaerr=3.66e-07,freq=3100
+observe: psr=J1125-6014,toaerr=3.67e-07,freq=1400
+observe: psr=J1125-6014,toaerr=6.07e-07,freq=600
+observe: psr=J1446-4701,toaerr=1.23e-07,freq=3100
+observe: psr=J1446-4701,toaerr=1.43e-07,freq=1400
+observe: psr=J1446-4701,toaerr=1.22e-07,freq=600
+observe: psr=J1545-4550,toaerr=5.2e-07,freq=3100
+observe: psr=J1545-4550,toaerr=4.91e-07,freq=1400
+observe: psr=J1545-4550,toaerr=1.36e-07,freq=600
+observe: psr=J1600-3053,toaerr=4.85e-07,freq=3100
+observe: psr=J1600-3053,toaerr=4.41e-07,freq=1400
+observe: psr=J1600-3053,toaerr=9.27e-07,freq=600
+observe: psr=J1603-7202,toaerr=1.81e-07,freq=3100
+observe: psr=J1603-7202,toaerr=1.06e-07,freq=1400
+observe: psr=J1603-7202,toaerr=1.36e-07,freq=600
+observe: psr=J1643-1224,toaerr=1.67e-07,freq=3100
+observe: psr=J1643-1224,toaerr=8.06e-07,freq=1400
+observe: psr=J1643-1224,toaerr=1.14e-07,freq=600
+observe: psr=J1713+0747,toaerr=1.41e-07,freq=3100
+observe: psr=J1713+0747,toaerr=8.44e-08,freq=1400
+observe: psr=J1713+0747,toaerr=6.93e-07,freq=600
+observe: psr=J1730-2304,toaerr=1.01e-07,freq=3100
+observe: psr=J1730-2304,toaerr=6.28e-07,freq=1400
+observe: psr=J1730-2304,toaerr=1.73e-07,freq=600
+observe: psr=J1744-1134,toaerr=3.92e-07,freq=3100
+observe: psr=J1744-1134,toaerr=3.07e-07,freq=1400
+observe: psr=J1744-1134,toaerr=6.35e-07,freq=600
+observe: psr=J1832-0836,toaerr=4.97e-07,freq=3100
+observe: psr=J1832-0836,toaerr=4.49e-07,freq=1400
+observe: psr=J1832-0836,toaerr=3.41e-07,freq=600
+observe: psr=J1857+0943,toaerr=9.38e-07,freq=3100
+observe: psr=J1857+0943,toaerr=7.51e-07,freq=1400
+observe: psr=J1857+0943,toaerr=2.17e-07,freq=600
+observe: psr=J1902-5105,toaerr=9.38e-07,freq=3100
+observe: psr=J1902-5105,toaerr=5.3e-07,freq=1400
+observe: psr=J1902-5105,toaerr=3.82e-07,freq=600
+observe: psr=J1909-3744,toaerr=8.28e-08,freq=3100
+observe: psr=J1909-3744,toaerr=1.01e-07,freq=1400
+observe: psr=J1909-3744,toaerr=2.25e-07,freq=600
+observe: psr=J1933-6211,toaerr=1.45e-07,freq=3100
+observe: psr=J1933-6211,toaerr=9.37e-07,freq=1400
+observe: psr=J1933-6211,toaerr=1.29e-07,freq=600
+observe: psr=J1939+2134,toaerr=1.74e-07,freq=3100
+observe: psr=J1939+2134,toaerr=1.13e-07,freq=1400
+observe: psr=J1939+2134,toaerr=4.6e-07,freq=600
+observe: psr=J2124-3358,toaerr=4.38e-07,freq=3100
+observe: psr=J2124-3358,toaerr=1.69e-07,freq=1400
+observe: psr=J2124-3358,toaerr=1.85e-07,freq=600
+observe: psr=J2129-5721,toaerr=1.01e-07,freq=3100
+observe: psr=J2129-5721,toaerr=7.2e-07,freq=1400
+observe: psr=J2129-5721,toaerr=1.21e-07,freq=600
+observe: psr=J2145-0750,toaerr=1.09e-07,freq=3100
+observe: psr=J2145-0750,toaerr=4.47e-07,freq=1400
+observe: psr=J2145-0750,toaerr=1.32e-07,freq=600
+observe: psr=J2241-5236,toaerr=4.47e-07,freq=3100
+observe: psr=J2241-5236,toaerr=1.25e-07,freq=1400
+observe: psr=J2241-5236,toaerr=2.47e-07,freq=600
+</schedule>
