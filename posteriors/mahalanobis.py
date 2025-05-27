@@ -42,15 +42,17 @@ def find_mahalanobis(data1, data2):
 cpars = ['gw']
 array_of_additions = np.arange(3, 31, 3)
 
-mean_distances = {}
+mean_distances_1 = {}
+mean_distances_2 = {}
 for i in range(0, 100):
-    rootdir = f"/fred/oz005/users/vdimarco/P3_final_changes/sims_correct/sim_{i}/chains/commonNoise_pl_nocorr_freegam_DE421"
+    rootdir = f"/fred/oz005/users/vdimarco/Choosing_Noise_Models_in_PTAs/sims_sanity_check/sim_{i}/chains/commonNoise_pl_nocorr_freegam_DE421"
 
     #print('loading chains')
     ### import data for simple model with no CH
-    dir_data_no_CH = rootdir + '/1'
-    dir_data_with_CH = rootdir + '/2'
-    outdir = "/fred/oz005/users/vdimarco/P3_final_changes/posteriors/mahalanobis_distances"
+    dir_data_no_CH = rootdir + '/3'
+    dir_data_with_CH_1 = rootdir + '/4'
+    dir_data_with_CH_2 = rootdir + '/5'
+    outdir = "/fred/oz005/users/vdimarco/Choosing_Noise_Models_in_PTAs/posteriors/mahalanobis_distances"
     os.makedirs(outdir, exist_ok=True)
 
     # print(dir_data_no_CH)
@@ -59,20 +61,28 @@ for i in range(0, 100):
 
     #dir_data_no_CH = '/fred/oz002/vdimarco/P3_spectral_index/sims/sims_for_paper/WN_TN_DM/chains/commonNoise_pl_nocorr_freegam_DE421/1'
     all_data_no_CH = np.load(dir_data_no_CH + '/chain.npy')
-    all_data_with_CH = np.load(dir_data_with_CH + '/chain.npy')
+    all_data_with_CH_1 = np.load(dir_data_with_CH_1 + '/chain.npy')
+    all_data_with_CH_2 = np.load(dir_data_with_CH_2 + '/chain.npy')
     pars_no_CH = np.loadtxt(dir_data_no_CH + '/pars.txt', dtype=np.unicode_)
-    pars_with_CH = np.loadtxt(dir_data_with_CH + '/pars.txt', dtype=np.unicode_)
+    pars_with_CH_1 = np.loadtxt(dir_data_with_CH_1 + '/pars.txt', dtype=np.unicode_)
+    pars_with_CH_2 = np.loadtxt(dir_data_with_CH_1 + '/pars.txt', dtype=np.unicode_)
     data_no_CH = find_data(pars_no_CH, cpars, all_data_no_CH)
-    data_with_CH = find_data(pars_with_CH, cpars, all_data_with_CH)
+    data_with_CH_1 = find_data(pars_with_CH_1, cpars, all_data_with_CH_1)
+    data_with_CH_2 = find_data(pars_with_CH_2, cpars, all_data_with_CH_2)
 
 
-    distance = find_mahalanobis(data_no_CH, data_with_CH)
-    mean_distances[i] = distance
-    print("mean distance: ", distance)
+    distance_1 = find_mahalanobis(data_no_CH, data_with_CH_1)
+    distance_2 = find_mahalanobis(data_with_CH_1, data_with_CH_2)
+    mean_distances_1[i] = distance_1
+    mean_distances_2[i] = distance_2
+    print(f"mean distance {i}: ", distance_1, distance_2)
 
 
-json_outfile = f"{outdir}/mean_mahalanobis_distances.json"
-with open(json_outfile, 'w') as f:
-    json.dump(mean_distances, f, indent=4)
+json_outfile_1 = f"{outdir}/mean_mahalanobis_distances_sanity_check_1.json"
+json_outfile_2 = f"{outdir}/mean_mahalanobis_distances_sanity_check_2.json"
+with open(json_outfile_1, 'w') as f:
+    json.dump(mean_distances_1, f, indent=4)
+with open(json_outfile_2, 'w') as f:
+    json.dump(mean_distances_2, f, indent=4)
 
 

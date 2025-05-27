@@ -8,10 +8,10 @@ import matplotlib.colors as mcolors
 matplotlib.rcParams['mathtext.fontset'] = 'stix'
 matplotlib.rcParams['font.family'] = 'STIXGeneral'
 
-outdir_1 = '/fred/oz005/users/vdimarco/P3_final_changes/sims/sim_0/chains/commonNoise_pl_nocorr_freegam_DE421/3'
-outdir_2 = '/fred/oz005/users/vdimarco/P3_final_changes/sims/sim_0/chains/commonNoise_pl_nocorr_freegam_DE421/4'
-all_data_1 = np.load(f'/fred/oz005/users/vdimarco/P3_final_changes/sims/sim_0/chains/commonNoise_pl_nocorr_freegam_DE421/3/chain.npy')
-all_data_2 = np.load(f'/fred/oz005/users/vdimarco/P3_final_changes/sims/sim_0/chains/commonNoise_pl_nocorr_freegam_DE421/4/chain.npy')
+outdir_1 = '/fred/oz005/users/vdimarco/Choosing_Noise_Models_in_PTAs/sims_sanity_check/sim_3/chains/commonNoise_pl_nocorr_freegam_DE421/1'
+outdir_2 = '/fred/oz005/users/vdimarco/Choosing_Noise_Models_in_PTAs/sims_sanity_check/sim_3/chains/commonNoise_pl_nocorr_freegam_DE421/2'
+all_data_1 = np.load(f'/fred/oz005/users/vdimarco/Choosing_Noise_Models_in_PTAs/sims_sanity_check/sim_3/chains/commonNoise_pl_nocorr_freegam_DE421/1/chain.npy')
+all_data_2 = np.load(f'/fred/oz005/users/vdimarco/Choosing_Noise_Models_in_PTAs/sims_sanity_check/sim_3/chains/commonNoise_pl_nocorr_freegam_DE421/2/chain.npy')
 
 
 pars_1 = np.loadtxt(outdir_1 + '/pars.txt', dtype=np.unicode_)
@@ -85,4 +85,4 @@ cc.configure(summary=False, linestyles=linestyles, linewidths=linewidths, sigmas
 
 #cfig = cc.plotter.plot(extents=[(3.9, 7), (-10.00, -4.00)], truth=[13./3.,-14.7], figsize=(10, 10))
 cfig = cc.plotter.plot(truth=[13./3.,-14.7], figsize=(10, 10))
-plt.savefig('test_withDM_sim_0.pdf', bbox_inches='tight')
+plt.savefig('sanity_check_sim_3.pdf', bbox_inches='tight')

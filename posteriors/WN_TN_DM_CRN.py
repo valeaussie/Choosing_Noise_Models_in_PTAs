@@ -538,7 +538,7 @@ ndim = len(x0)
 #params = hyper_model.param_names
 
 # sampler for N steps
-N = int(1e6)
+N = int(1e7)
 
 # output directory:
 print(datadir, crn_name, chainnum)
