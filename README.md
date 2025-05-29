@@ -14,12 +14,4 @@ Once you have the outputs from the Enterprise analysis, you will need to run "ma
 
 To make the mahalanobis distances first run "mahalanobis.py" then "plot_distribution.py" for the plot in the appendix, or "plot_mahalanobis.py" for the plot in Figure 5 of the paper.
 
-DATA
-
-The folder "sims_sanity_checks" contains the simulations for the Figure in the appendix as well as the chains.
-The misspecified model compares chains 3 and 4 and the correctly specified model compares chains 4 and 5. They are in the folder "sims_sanity_check/sim_0/chains/commonNoise_pl_nocorr_freegam_DE421" for each simulation (in this case sim_0)
-
-The folder "" contains the simulations for Figure 5 of the paper
-
-The folder "" contains the simulations for Figure 1, 2, 3 and 4 of the papers
 
